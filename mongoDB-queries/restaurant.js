@@ -32,7 +32,7 @@ db.restaurant.find({
     }
 })
 
-//10. Trobar els restaurants que estan situats en una longitud inferior a -95.754168.
+//10. Trobar els restaurants situats en una longitud inferior a -95.754168.
 db.restaurant.find({"address.coord.0": {$lt:-95.754168}});
 
 //11. Trobar els restaurants que no cuinen menjar 'American ' i tenen algun score superior a 70 
@@ -45,22 +45,79 @@ db.restaurant.find({
     ]
 });
 
-//12. Trobar els restaurants que no preparen menjar 'American' i tenen algun score superior a 70 i que, a més, es localitzen en longituds inferiors a -65.754168. Nota: Fes aquesta consulta sense utilitzar operador $and.
-//13. Trobar els restaurants que no preparen menjar 'American ', tenen alguna nota 'A' i no pertanyen a Brooklyn. 
+//12. Idem anterior sense utilitzar operador $and.
+
+db.restaurant.find({
+    "grades.score": {$gt : 70},
+    "address.coord.0": {$lt:-65.754168},
+    $nor : [{cuisine: 'American '}]
+    });
+
+// mismo query con orden cambiado. Ambos funcionan
+db.restaurant.find({
+    $nor : [{cuisine: 'American '}],
+    "grades.score": {$gt : 70},
+    "address.coord.0": {$lt:-65.754168}
+});
+
+
+//13. Trobar els restaurants que no preparen menjar 'American ', 
+// tenen alguna nota 'A' i no pertanyen a Brooklyn. 
 //S'ha de mostrar el document segons la cuisine en ordre descendent.
-db.restaurant.find().sort({cuisine: -1});
-//14. Trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que contenen 'Wil' en les tres primeres lletres en el seu nom.
-//15. Trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que contenen 'ces' en les últimes tres lletres en el seu nom. . 
-//16 Trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que contenen 'Reg' en qualsevol lloc del seu nom.
+db.restaurant.find({
+    $nor : [
+        {cuisine: 'American '},
+        {borough: "Brooklyn"}
+    ],
+    "grades.grade" : {$eq : "A"}
+},
+{borough: 1}
+)
+.sort({cuisine: -1});
+
+//14. Trobar el restaurant_id, name, borough i cuisine per restaurants 
+// amb 'Wil' en les tres primeres lletres en el seu nom.
+db.restaurant.find({
+    name: {$regex: "^Wil"}
+},{
+    restaurant_id: 1,
+    name: 1,
+    borough: 1,
+    cuisine: 1
+});
+
+//15. Trobar el restaurant_id, name, borough i cuisine per a aquells restaurants 
+// amb "ces" en las ultimas letras del nombre
+db.restaurant.find({
+    name: {$regex: "ces$"}
+},{
+    restaurant_id: 1,
+    name : 1,
+    borough : 1,
+    cuisine : 1
+})
+
+//16 Trobar el restaurant_id, name, borough i cuisine per restaurants 
+// amb 'Reg' en qualsevol lloc del seu nom.
+db.restaurant.find({
+    name: {$regex: "Reg"}
+},{
+    restaurant_id: 1,
+    name : 1,
+    borough : 1,
+    cuisine : 1
+})
+
 //17. Trobar els restaurants del Bronx que preparen plats Americans o xinesos.
 //18. Trobar el restaurant_id, name, borough i cuisine que pertanyen a Staten Island, Queens, Bronx o Brooklyn.
 //19. Trobar el restaurant_id, name, borough i cuisine que NO pertanyen a Staten Island, Queens, Bronx o Brooklyn.
 //20. Trobar el restaurant_id, name, borough i cuisine amb nota menor que 10.
 
-//21. Trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que preparen marisc ('seafood') excepte si són 'American ', 'Chinese' o el name del restaurant comença amb lletres 'Wil'.
-//22. Trobar el restaurant_id, name i grades per a aquells restaurants que aconsegueixin un grade de "A" i un score d'11 amb un ISODate "2014-08-11T00:00:00Z".
-//23. Trobar el restaurant_id, name i grades per a aquells restaurants on el 2n element de l'array de graus conté un grade de "A" i un score 9 amb un ISODate "2014-08-11T00:00:00Z".
-//24. Trobar el restaurant_id, name, adreça i ubicació geogràfica per a aquells restaurants on el segon element de l'array coord conté un valor entre 42 i 52.
+//21. Trobar el restaurant_id, name, borough i cuisine per restaurants que preparen marisc ('seafood') excepte si són 'American ', 'Chinese' o el name del restaurant comença amb lletres 'Wil'.
+
+//22. Trobar el restaurant_id, name i grades per restaurants amb un grade de "A" i un score d'11 amb un ISODate "2014-08-11T00:00:00Z".
+//23. Trobar el restaurant_id, name i grades per restaurants on el 2n element de l'array de graus conté un grade de "A" i un score 9 amb un ISODate "2014-08-11T00:00:00Z".
+//24. Trobar el restaurant_id, name, adreça i ubicació geogràfica per restaurants on el segon element de l'array coord conté un valor entre 42 i 52.
 //25. organitzar els restaurants per nom en ordre ascendent.
 //26.organitzar els restaurants per nom en ordre descendent.
 //27. organitzar els restaurants pel nom de la cuisine en ordre ascendent i pel barri en ordre descendent.
