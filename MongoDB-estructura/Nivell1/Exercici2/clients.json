@@ -1,0 +1,56 @@
+[
+    {
+        "_id": ObjectId("65b123abc456def789001234"),
+        "name": "María Teresa Altés",
+        "data": {
+            "address": "Londres, 43, A-2, Barcelona",
+            "tel": "934101137",
+            "email": "mta@gmail.com",
+            "register_date": ISODate("2023-09-23T00:00:00Z")
+        },
+        "introduced_by_client": ObjectId("65b987xyz456def789001999")
+    },
+    {
+        "_id": ObjectId("65b987xyz456def789001999"),
+        "name": "Sylvia Cardona",
+        "data": {
+            "address": "Diagonal, 12, Barcelona",
+            "tel": "932567890",
+            "email": "sylvia@gmail.com",
+            "register_date": ISODate("2022-06-15T00:00:00Z")
+        }        
+    },
+    {
+        "_id": ObjectId("65b654abc789def456002345"),
+        "name": "Oriol Pérez",
+        "data": {
+            "address": "Carrer Ample, 56, Barcelona",
+            "tel": "931223344",
+            "email": "oriolp@gmail.com",
+            "register_date": ISODate("2021-12-10T00:00:00Z")
+        },
+        "introduced_by_client": ObjectId("65b123abc456def789001234")
+    },
+    {
+        "_id": ObjectId("65b999abc456def789004321"),
+        "name": "Ana López",
+        "data": {
+            "address": "Gran Vía, 89, Valencia",
+            "tel": "963112233",
+            "email": "analopez@gmail.com",
+            "register_date": ISODate("2023-01-05T00:00:00Z")
+        }           
+    },
+    {
+        "_id": ObjectId("65b222abc456def789005555"),
+        "name": "Frank Pulido",
+        "data": {
+            "address": "Juana de Arco, 33, Barcelona",
+            "tel": "934567890",
+            "email": "fpulido@gmail.com",
+            "register_date": ISODate("2024-07-20T00:00:00Z")
+        },
+        "introduced_by_client": ObjectId("65b987xyz456def789001999")
+    }
+]
+

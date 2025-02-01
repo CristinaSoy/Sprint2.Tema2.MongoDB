@@ -1,0 +1,91 @@
+[
+    {
+        "_id": ObjectId("65c123abc456def789009999"),
+        "brand": "La Gafa Paca",
+        "frame": { 
+            "type": "metalica",
+            "color": "blue"
+        },
+        "lenses": {
+            "left": {
+                "graduation": -0.45,
+                "color": "red"
+            },
+            "right": {
+                "graduation": -0.50,
+                "color": "red"
+            }
+        },
+        "supplier": ObjectId("65a456abc456def789006789"),
+        "price": 211.30,
+        "sales": [
+            {
+                "client":ObjectId("65a456abc456def789006600"),
+                "date": ISODate("2024-01-30T15:45:00Z"),
+                "employee": "Gervasi",
+                "price": 211.30
+            },
+            {
+               "client": ObjectId("65b987xyz456def789001999"),
+                "date": ISODate("2024-02-01T14:30:00Z"),
+                "employee": "Macarena",
+                "price": 190        
+            }
+        ]      
+    },
+    {
+        "_id": ObjectId("65c123abc456def789008888"),
+        "brand": "Papelou",
+        "frame": {
+            "type": "flotante",
+            "color": "black"
+        },
+        "lenses": {
+            "left": {
+                "graduation": 1.25,
+                "color": "clear"
+            },
+            "right": {
+                "graduation": 1.50,
+                "color": "clear"
+            }
+        },
+        "supplier": ObjectId("65a999abc456def789007777"),
+        "price": 150.75,
+        "sales": [
+            {
+                "client": ObjectId("65b999abc456def789004321"),
+                "date": ISODate("2024-01-10T10:15:00Z"),
+                "employee": "Macarena",
+                "price": 150.75
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("65c123abc456def789007777"),
+        "brand": "TayTan",
+        "frame": {
+            "type": "pasta",
+            "color": "brown"
+        },
+        "lenses": {
+            "left": {
+                "graduation": 2.30,
+                "color": "clear"
+            },
+            "right": {
+                "graduation": 2.00,
+                "color": "clear"
+            }
+        },
+        "supplier": ObjectId("65a456abc456def789006789"),
+        "price": 180.99
+        "sales":[
+        {
+            "client": ObjectId("65b222abc456def789005555"),
+            "date": ISODate("2024-17-20T00:00:00Z"),
+            "employee" : "Gervasi",
+            "price": 99.99 
+        ]
+    }
+]

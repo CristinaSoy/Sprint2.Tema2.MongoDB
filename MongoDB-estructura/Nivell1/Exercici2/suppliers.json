@@ -1,0 +1,40 @@
+[
+    {
+        "_id": ObjectId("65a456abc456def789006789"),
+        "name": "World Glasses",
+        "address": {
+            "street": "Paris",
+            "building": 12,
+            "floor": 3,
+            "door": "A",
+            "city": "Bilbao",
+            "zip_code": "34054",
+            "country": "Spain"
+        },
+        "contact": {
+            "tel": "607890898",
+            "fax": "923454543",
+            "email": "info@worldglasses.com"
+        },
+        "VAT_number": "ESX1234567"
+    },
+    {
+        "_id": ObjectId("65a999abc456def789007777"),
+        "name": "Visionary Optics",
+        "address": {
+            "street": "Diagonal",
+            "building": 30,
+            "floor": 5,
+            "door": "B",
+            "city": "Barcelona",
+            "zip_code": "08019",
+            "country": "Spain"
+        },
+        "contact": {
+            "tel": "934445566",
+            "fax": "933332211",
+            "email": "contact@visionaryoptics.com"
+        },
+        "VAT_number": "ESY9876543"
+    }
+]

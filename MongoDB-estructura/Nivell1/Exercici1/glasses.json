@@ -1,0 +1,82 @@
+[
+    {
+        "_id": ObjectId("65c123abc456def789009999"),
+        "brand": "La Gafa Paca",
+        "frame": { 
+            "type": "metalica",
+            "color": "blue"
+        },
+        "lenses": {
+            "left": {
+                "graduation": -0.45,
+                "color": "red"
+            },
+            "right": {
+                "graduation": -0.50,
+                "color": "red"
+            }
+        },
+        "supplier": ObjectId("65a456abc456def789006789"),
+        "price": 211.30
+    },
+    {
+        "_id": ObjectId("65c123abc456def789008888"),
+        "brand": "OpticStyle",
+        "frame": {
+            "type": "flotante",
+            "color": "black"
+        },
+        "lenses": {
+            "left": {
+                "graduation": 1.25,
+                "color": "clear"
+            },
+            "right": {
+                "graduation": 1.50,
+                "color": "clear"
+            }
+        },
+        "supplier": ObjectId("65a999abc456def789007777"),
+        "price": 150.75
+    },
+    {
+        "_id": ObjectId("65c123abc456def789007777"),
+        "brand": "TayTan",
+        "frame": {
+            "type": "pasta",
+            "color": "brown"
+        },
+        "lenses": {
+            "left": {
+                "graduation": 2.30,
+                "color": "clear"
+            },
+            "right": {
+                "graduation": 2.00,
+                "color": "clear"
+            }
+        },
+        "supplier": ObjectId("65a456abc456def789006789"),
+        "price": 180.99
+    },
+    {
+        "_id": ObjectId("65c123abc456def789006666"),
+        "brand": "Cristin Glasses",
+        "frame": {
+            "type": "metalica",
+            "color": "silver"
+        },
+        "lenses": {
+            "left": {
+                "graduation": -1.00,
+                "color": "blue"
+            },
+            "right": {
+                "graduation": -1.25,
+                "color": "blue"
+            }
+        },
+        "supplier": ObjectId("65a999abc456def789007777"),
+        "price": 240.50
+    }
+]
