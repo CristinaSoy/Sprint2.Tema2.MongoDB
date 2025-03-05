@@ -17,16 +17,19 @@
             }
         },
         "supplier": ObjectId("65a456abc456def789006789"),
+        "supplier_name": "World Glasses",
         "price": 211.30,
         "sales": [
             {
-                "client":ObjectId("65a456abc456def789006600"),
+                "client":ObjectId("65b222abc456def789005555"),
+                "client_name": "Frank Pulido",
                 "date": ISODate("2024-01-30T15:45:00Z"),
                 "employee": "Gervasi",
                 "price": 211.30
             },
             {
                "client": ObjectId("65b987xyz456def789001999"),
+               "client_name": "Sylvia Cardona",
                 "date": ISODate("2024-02-01T14:30:00Z"),
                 "employee": "Macarena",
                 "price": 190        
@@ -51,10 +54,12 @@
             }
         },
         "supplier": ObjectId("65a999abc456def789007777"),
+        "supplier_name": "Visionary Optics",
         "price": 150.75,
         "sales": [
             {
-                "client": ObjectId("65b999abc456def789004321"),
+                "client": ObjectId("65b123abc456def789001234"),
+                "client_name": "María Teresa Altés",
                 "date": ISODate("2024-01-10T10:15:00Z"),
                 "employee": "Macarena",
                 "price": 150.75
@@ -79,10 +84,12 @@
             }
         },
         "supplier": ObjectId("65a456abc456def789006789"),
+        "supplier_name": "World Glasses",
         "price": 180.99
         "sales":[
         {
             "client": ObjectId("65b222abc456def789005555"),
+            "client_name": "Frank Pulido",
             "date": ISODate("2024-17-20T00:00:00Z"),
             "employee" : "Gervasi",
             "price": 99.99 

@@ -16,6 +16,20 @@
                 "products": [     
                     {
                         "glasses_id": ObjectId("65c123abc456def789009999"),
+                        "frame": { 
+                            "type": "metalica",
+                            "color": "blue"
+                        },
+                        "lenses": {
+                            "left": {
+                                "graduation": -0.45,
+                                "color": "red"
+                            },
+                            "right": {
+                                "graduation": -0.50,
+                                "color": "red"
+                            }
+                        },
                         "price": 245.45
                     }
                 ]
@@ -39,6 +53,20 @@
                 "products": [
                     {
                         "glasses_id": ObjectId("65c123abc456def789007777"),
+                        "frame": {
+                            "type": "flotante",
+                            "color": "black"
+                        },
+                        "lenses": {
+                            "left": {
+                                "graduation": 1.25,
+                                "color": "clear"
+                            },
+                            "right": {
+                                "graduation": 1.50,
+                                "color": "clear"
+                            }
+                        },
                         "price": 180.99
                     }
                 ]
@@ -74,6 +102,20 @@
                 "products": [
                     {
                         "glasses_id": ObjectId("65c123abc456def789008888"),
+                        "frame": {
+                            "type": "pasta",
+                            "color": "brown"
+                        },
+                        "lenses": {
+                            "left": {
+                                "graduation": 2.30,
+                                "color": "clear"
+                            },
+                            "right": {
+                                "graduation": 2.00,
+                                "color": "clear"
+                            }
+                        },
                         "price": 150.75
                     }
                 ]
@@ -90,7 +132,31 @@
             "register_date": ISODate("2022-07-20T00:00:00Z")
         },
         "introduced_by_client": ObjectId("65b987xyz456def789001999"),
-        "last_shoppings": []
+        "last_shoppings": [
+            {
+            "date": ISODate("2024-01-10T10:15:00Z"),
+            "employee": "David",
+            "products": [
+                {
+                    "glasses_id": ObjectId("65c123abc456def789007777"),
+                    "frame": {
+                        "type": "metalica",
+                        "color": "silver"
+                    },
+                    "lenses": {
+                        "left": {
+                            "graduation": -1.00,
+                            "color": "blue"
+                        },
+                        "right": {
+                            "graduation": -1.25,
+                            "color": "blue"
+                        }
+                    },
+                    "price": 219.99
+                ]
+            }
+        ]
     }
 ]
 
